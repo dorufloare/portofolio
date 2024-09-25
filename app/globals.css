@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #101820;
     --foreground: #ededed;
   }
 }
@@ -24,4 +24,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+body {
+  background-color: #000000; /* Dark background color */
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px), /* Adjusted line color to very light gray */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); /* Same adjustment */
+  background-size: 10px 10px; /* Size of the grid */
+  color: #FFFFFF; /* Text color for contrast */
 }
