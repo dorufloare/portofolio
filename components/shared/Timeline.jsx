@@ -30,7 +30,7 @@ const Achievements = () => {
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            <span className="text-bronze"> THIRD PLACE </span> at International Teams Programming Reply Code Challenge
+            <span className="text-bronze"> THIRD PLACE </span> at International Teams Programming Contest Reply Code Challenge
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
