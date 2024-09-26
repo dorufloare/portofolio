@@ -54,7 +54,7 @@ useEffect(() => {
     <> 
       <div
         ref={ref}
-        className="h-[150vh] md:h-[250vh] py-40 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] p-0">
+        className="h-[200vh] md:h-[250vh] py-40 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] p-0">
         <div className="items-start">
          
         </div>
