@@ -56,14 +56,14 @@ export const MacbookScroll = ({
   return (
     (<div
       ref={ref}
-      className="min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.70] sm:scale-[0.80]">
+      className="min-h-[180vh] md:min-h-[200vh]  flex flex-col items-center py-0 md:py-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100 lg:scale-110  scale-[0.60] sm:scale-[0.80]">
       <motion.h2
         style={{
           translateY: textTransform,
           opacity: textOpacity,
         }}
         className="dark:text-white text-neutral-800 text-3xl font-bold mb-20 text-center">
-        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white">
+        <span className="text-6xl sm:text-7xl md:text-7xl lg:text-7xl font-bold text-center text-white">
           Doru Floare
         </span>
         <div className="flex justify-center">
