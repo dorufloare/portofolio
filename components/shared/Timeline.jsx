@@ -18,7 +18,7 @@ const Achievements = () => {
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            2 x <span className="text-gold"> GOLD MEDAL </span> at National Programming contest "Grigore Moisil"
+            2 x <span className="text-gold"> GOLD MEDAL </span> at National Programming contest Grigore Moisil
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
@@ -53,7 +53,7 @@ const Achievements = () => {
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            1 x <span className="text-silver"> SILVER MEDAL </span> at National Programming contest "Grigore Moisil"
+            1 x <span className="text-silver"> SILVER MEDAL </span> at National Programming contest Grigore Moisil
           </p>
 
           <p
