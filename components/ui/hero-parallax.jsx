@@ -50,37 +50,40 @@ useEffect(() => {
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
   return (
-    (<div
-      ref={ref}
-      className="h-[300vh] py-40 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] p-0">
-      <div className="items-start">
-        <Header />
+    (
+    <> 
+      <div
+        ref={ref}
+        className="h-[150vh] md:h-[250vh] py-40 antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] p-0">
+        <div className="items-start">
+         
+        </div>
+        <motion.div
+          style={{
+            rotateX,
+            rotateZ,
+            translateY,
+            opacity,
+          }}
+          className="">
+          <motion.div className="flex flex-row-reverse space-x-reverse space-x-8 mb-20">
+            {firstRow.map((product) => (
+              <ProductCard product={product} translate={translateX} key={product.title} />
+            ))}
+          </motion.div>
+          <motion.div className="flex flex-row  mb-20 space-x-8 ">
+            {secondRow.map((product) => (
+              <ProductCard product={product} translate={translateXReverse} key={product.title} />
+            ))}
+          </motion.div>
+          <motion.div className="flex flex-row-reverse space-x-reverse space-x-8">
+            {thirdRow.map((product) => (
+              <ProductCard product={product} translate={translateX} key={product.title} />
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
-      <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-        className="">
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-12 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard product={product} translate={translateX} key={product.title} />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-12 ">
-          {secondRow.map((product) => (
-            <ProductCard product={product} translate={translateXReverse} key={product.title} />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-12">
-          {thirdRow.map((product) => (
-            <ProductCard product={product} translate={translateX} key={product.title} />
-          ))}
-        </motion.div>
-      </motion.div>
-    </div>)
+      </>)
   );
 };
 export const Header = () => {

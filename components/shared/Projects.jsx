@@ -6,7 +6,12 @@ const Projects = () => {
   return <HeroParallax products={products} />;
 }
 const products = [
-  
+  {
+    title: "Verstappen AI",
+    link: "https://github.com/dorufloare/verstappen-ai",
+    thumbnail:
+      "/f1.png",
+  },
   {
     title: "Maide",
     link: "https://maide.so",
@@ -19,24 +24,21 @@ const products = [
     thumbnail:
       "/imaginify.png",
   },
+  
+  
+  {
+    title: "Flappy Bird AI",
+    link: "https://github.com/dorufloare/flappy-bird-ai",
+    thumbnail:
+      "/bird.jpg",
+  },
   {
     title: "Best Price (in development)",
     link: "https://best-price-inky.vercel.app/",
     thumbnail:
       "/best-price.png",
   },
-  {
-    title: "Verstappen AI",
-    link: "https://github.com/dorufloare/verstappen-ai",
-    thumbnail:
-      "/f1.png",
-  },
-  {
-    title: "QT Chess bot",
-    link: "https://github.com/dorufloare/chess",
-    thumbnail:
-      "/chess.png",
-  },
+  
   {
     title: "Poker bot",
     link: "https://github.com/dorufloare/poker",
@@ -51,10 +53,10 @@ const products = [
       "/baselinker.png",
   },
   {
-    title: "Flappy Bird AI",
-    link: "https://github.com/dorufloare/flappy-bird-ai",
+    title: "QT Chess bot",
+    link: "https://github.com/dorufloare/chess",
     thumbnail:
-      "/bird.jpg",
+      "/chess.png",
   },
   {
     title: "Ascii art generator",

@@ -2,7 +2,8 @@
 const nextConfig = {
   images: {
     domains: [
-      "aceternity.com"
+      "aceternity.com",
+      "assets.aceternity.com"
     ]
   }
 };
