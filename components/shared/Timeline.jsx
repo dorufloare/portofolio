@@ -40,7 +40,7 @@ const Achievements = () => {
       ),
     },
     {
-      title: "Primary and Middleschool (2012 - 2020)",
+      title: "Primary and Middle school (2012 - 2020)",
       content: (
         <div className="md:ml-[20%]">
          <p
