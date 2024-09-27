@@ -22,6 +22,10 @@ const Achievements = () => {
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
+            2 x qualifying for the international romanian competitive programming team    
+          </p>
+          <p
+            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
             <span className="text-silver"> SILVER MEDAL </span> at International Programming contest RMI
           </p>
           <p
