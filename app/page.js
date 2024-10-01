@@ -17,11 +17,10 @@ const Home = () => {
         <Header/>
         </div>
       <Projects/>
-      <Achievements/>
+      <Achievements/> 
       <Contacts/>
     </div>
   );
 };
 
 export default Home;
-``

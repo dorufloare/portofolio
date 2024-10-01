@@ -58,6 +58,17 @@ const Contact = () => {
       ),
       href: "mailto:dorufloare2005@gmail.com",
     },
+    {
+      title: "LinkedIn",
+      icon: (
+        <Image
+          src="/linkedin.svg"
+          width={20}
+          height={20}
+          alt="linkedin" />
+      ),
+      href: "https://www.linkedin.com/in/doru-floare-21682732b/",
+    },
   ];
   return (
     (<>
