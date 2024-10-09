@@ -1,90 +1,75 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+import React from 'react';
+import { useTranslation } from '@/app/TranslationContext';
 import { Timeline } from "@/components/ui/timeline";
 
 const Achievements = () => {
+  const messages = useTranslation();
+
   const data = [
     {
-      title: "Highschool (2020 - 2024)",
+      title: messages['highschool-title'],
       content: (
         <div className="md:ml-[20%]">
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base  font-normal mb-4">
-            <span className="text-gold"> GOLD MEDAL </span> at International Programming contest Info(1)Cup
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-gold">{messages['gold-medal']}</span> {messages['info-cup']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
-            4 x <span  className="text-gold"> FIRST PLACE </span> at Regional Olympiad in Informatics
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-gold">4 x {messages['first-place']}</span> {messages['regional-olympiad']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            2 x <span className="text-gold"> GOLD MEDAL </span> at National Programming contest Grigore Moisil
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-gold">2 x {messages['gold-medal']}</span> {messages['grigore-moisil']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            2 x qualifying for the international romanian competitive programming team    
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            2 x {messages['international-team-qualification']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            <span className="text-silver"> SILVER MEDAL </span> at International Programming contest RMI
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-silver">{messages['silver-medal']}</span> {messages['rmi']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            4 x <span className="text-silver"> SILVER MEDAL </span> at National Olympiad in Informatics
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            4 x <span className="text-silver">{messages['silver-medal']}</span> {messages['national-olympiad']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            <span className="text-bronze"> THIRD PLACE </span> at International Teams Programming Contest Reply Code Challenge
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-bronze">{messages['third-place']}</span> {messages['reply-code']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            Reached <span className="text-gold"> MASTER </span> rank on  <a className='underline' href='https://codeforces.com/profile/dorulean'>Codeforces  </a>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            {messages['reached']} <span className="text-gold">{messages['master']}</span> {messages['codeforces']}
           </p>
         </div>
       ),
     },
     {
-      title: "Primary and Middle school (2012 - 2020)",
+      title: messages['primary-title'],
       content: (
         <div className="md:ml-[20%]">
-         <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            <span className="text-bronze"> BRONZE MEDAL </span> at International Programming contest Info(1)Cup
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-bronze">{messages['bronze-medal']}</span> {messages['info-cup']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            3 x <span className="text-gold"> FIRST PLACE </span> at Regional Olympiad in Informatics
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-gold">3 x {messages['first-place']}</span> {messages['regional-olympiad']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            1 x <span className="text-silver"> SILVER MEDAL </span> at National Programming contest Grigore Moisil
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-silver">{messages['silver-medal']}</span> {messages['grigore-moisil']}
           </p>
-
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            2 x <span className="text-silver"> SILVER MEDAL </span> and 1 x <span className="text-bronze"> BRONZE MEDAL </span> at National Olympiad in Informatics
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-silver">2 x {messages['silver-medal']}</span> {messages['national-informatics']}
+            &nbsp; {messages['and']} <span className="text-bronze">{messages['1x-bronze']} {messages['bronze-medal']}</span>
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            3 x <span className="text-gold"> FIRST PLACE </span> at Regional Olympiad in Mathematics
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-gold">3 x {messages['first-place']}</span> {messages['regional-math']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            1 x <span className="text-bronze"> BRONZE MEDAL </span> at National Olympiad in Mathematics
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-bronze">{messages['bronze-medal']}</span> {messages['national-math']}
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs  md:text-base font-normal mb-4">
-            2 x <span className="text-gold"> CHAMPION </span> at the biggest regional Chess tournament
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-normal mb-4">
+            <span className="text-gold">2 x {messages['chess-champion']}</span> {messages['regional-chess']}
           </p>
         </div>
       ),
     },
   ];
-  return (
-    (<div className="w-full">
-      <Timeline data={data} />
-    </div>)
-  );
-}
 
-export default Achievements
+  return <Timeline data={data} />;
+};
+
+export default Achievements;

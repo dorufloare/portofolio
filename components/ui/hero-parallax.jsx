@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/app/TranslationContext";
 
 export const HeroParallax = ({ products }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -114,11 +115,13 @@ export const HeroParallax = ({ products }) => {
 };
 
 export const Header = () => {
+  const messages = useTranslation();
+
   return (
     <div className="max-w-7xl mx-auto py-16 md:py-32 px-4 w-full">
       <div className="relative text-center md:text-left">
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold dark:text-white">
-          Some of my projects
+          {messages['my-projects']}
         </h1>
         <div className="flex flex-row justify-center md:hidden text-center">
           <Image

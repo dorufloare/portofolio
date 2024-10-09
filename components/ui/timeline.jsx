@@ -1,6 +1,8 @@
 "use client";;
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "@/app/TranslationContext";
+
 export const Timeline = ({ data = [] }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
@@ -21,11 +23,13 @@ export const Timeline = ({ data = [] }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const messages = useTranslation();
+
   return (
     <div className="w-full  md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl font-bold text-center md:text-left">
-          My biggest achievements over the years:
+          {messages['achievements-title']}
         </h2>
       
       </div>

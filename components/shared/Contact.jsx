@@ -11,8 +11,11 @@ import {
   IconTerminal2,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import { useTranslation } from "@/app/TranslationContext";
 
 const Contact = () => {
+  const messages = useTranslation();
+
   const links = [
     {
       title: "Github",
@@ -73,7 +76,7 @@ const Contact = () => {
   return (
     (<>
        <h2 className="text-lg md:text-4xl text-black dark:text-white max-w-4xl font-bold text-center md:text-left mb-0 md:mt-[100px]">
-          Contact me here:
+          {messages['contact']}
         </h2>
       <div className="flex items-center justify-center h-[15rem] w-full">
         <FloatingDock
