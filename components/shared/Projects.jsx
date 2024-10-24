@@ -14,7 +14,7 @@ const products = [
   },
   {
     title: "Maide",
-    link: "https://maide.so",
+    link: "https://maide.ro",
     thumbnail:
       "/maide.png",
   },
