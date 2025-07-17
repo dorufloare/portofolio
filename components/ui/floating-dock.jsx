@@ -1,134 +1,84 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
-
 import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
-export const FloatingDock = ({
-  items,
-  desktopClassName,
-  mobileClassName
-}) => {
-  return (<>
-    <FloatingDockDesktop items={items} className={desktopClassName} />
-  </>);
-};
-
-const FloatingDockMobile = ({
-  items,
-  className
-}) => {
-  let mouseX = useMotionValue(Infinity);
+export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
   return (
-    (<motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
-      className={cn(
-        "mx-auto md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
-        className
-      )}>
-      {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
-      ))}
-    </motion.div>)
+    <>
+      <FloatingDockDesktop items={items} className={desktopClassName} />
+    </>
   );
 };
 
-const FloatingDockDesktop = ({
-  items,
-  className
-}) => {
+const FloatingDockDesktop = ({ items, className }) => {
   let mouseX = useMotionValue(Infinity);
   return (
-    (<motion.div
+    <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "mx-auto flex h-20 gap-6 items-end rounded-2xl px-6 pb-4 shadow-xl",
+        "bg-[#0e1117]", // exact dark background
         className
-      )}>
+      )}
+    >
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} />
       ))}
-    </motion.div>)
+    </motion.div>
   );
 };
 
-function IconContainer({
-  mouseX,
-  title,
-  icon,
-  href
-}) {
-  let ref = useRef(null);
+function IconContainer({ mouseX, title, icon, href }) {
+  const ref = useRef(null);
+  const [hovered, setHovered] = useState(false);
 
-  let distance = useTransform(mouseX, (val) => {
-    let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
+  const distance = useTransform(mouseX, (val) => {
+    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const widthTransform = useTransform(distance, [-150, 0, 150], [50, 90, 50]);
+  const heightTransform = useTransform(distance, [-150, 0, 150], [50, 90, 50]);
 
-  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
-  let heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [24, 48, 24]);
+  const heightTransformIcon = useTransform(distance, [-150, 0, 150], [24, 48, 24]);
 
-  let width = useSpring(widthTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-  let height = useSpring(heightTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
+  const width = useSpring(widthTransform, { mass: 0.1, stiffness: 150, damping: 12 });
+  const height = useSpring(heightTransform, { mass: 0.1, stiffness: 150, damping: 12 });
 
-  let widthIcon = useSpring(widthTransformIcon, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-  let heightIcon = useSpring(heightTransformIcon, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-
-  const [hovered, setHovered] = useState(false);
+  const widthIcon = useSpring(widthTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
+  const heightIcon = useSpring(heightTransformIcon, { mass: 0.1, stiffness: 150, damping: 12 });
 
   return (
-    (<Link href={href}>
+    <Link href={href}>
       <motion.div
         ref={ref}
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative">
+        className="aspect-square rounded-full flex items-center justify-center relative bg-[#161b22]" // circle color
+      >
         <AnimatePresence>
           {hovered && (
             <motion.div
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs">
+              className="px-2 py-0.5 whitespace-pre rounded-md text-white absolute left-1/2 -translate-x-1/2 -top-10 w-fit text-xs bg-[#161b22] border border-[#30363d]" // tooltip
+            >
               {title}
             </motion.div>
           )}
         </AnimatePresence>
         <motion.div
           style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center">
+          className="flex items-center justify-center text-white"
+        >
           {icon}
         </motion.div>
       </motion.div>
-    </Link>)
+    </Link>
   );
 }

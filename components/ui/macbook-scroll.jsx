@@ -24,7 +24,7 @@ import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import Image from "next/image";
-import Subtitle from "../shared/Subtitle";
+import Subtitle from "../shared/Hero";
 
 export const MacbookScroll = ({
   src,
