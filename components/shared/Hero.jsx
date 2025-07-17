@@ -29,28 +29,28 @@ const Hero = () => {
             <span className="text-[#56b6c2]">cout</span>
             {" << "}
             <span className="text-[#98c379]">
-              "Performance-focused development\n"
+              {"\"Performance-focused development\\n\""}
             </span>
             {";\n  "}
             <span className="text-[#e5c07b]">std::</span>
             <span className="text-[#56b6c2]">cout</span>
             {" << "}
             <span className="text-[#98c379]">
-              "Strong fundamentals in DSA\n"
+              {"\"Strong fundamentals in DSA\\n\""}
             </span>
             {";\n  "}
             <span className="text-[#e5c07b]">std::</span>
             <span className="text-[#56b6c2]">cout</span>
             {" << "}
             <span className="text-[#98c379]">
-              "Complex problem solving\n"
+              {"\"Complex problem solving\\n\""}
             </span>
             {";\n  "}
             <span className="text-[#e5c07b]">std::</span>
             <span className="text-[#56b6c2]">cout</span>
             {" << "}
             <span className="text-[#98c379]">
-              "Pragmatic and clean code\n"
+              {"\"Pragmatic and clean code\\n\""}
             </span>
             {";\n\n  "}
             <span className="text-[#61afef]">return</span>{" "}
