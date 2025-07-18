@@ -6,7 +6,7 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 export function Card({ title, description, imageUrl, githubUrl }) {
   return (
     <CardContainer className="inter-var m-0 p-0 py-4">
-      <CardBody className="m-0 bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#0e1117] dark:border-white/[0.2] border-black/[0.1] w-[44vw] sm:w-[22rem] md:w-[24rem] h-auto rounded-xl p-2 sm:p-4 border">
+      <CardBody className="m-0 bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[#0e1117] dark:border-white/[0.2] border-black/[0.1] w-full sm:w-[20rem] md:w-[22rem] xl:w-[24rem] 2xl:w-[26rem] h-auto rounded-xl p-2 sm:p-4 border">
         <CardItem
           translateZ="50"
           className="text-sm sm:text-xl font-bold text-neutral-600 dark:text-white"
