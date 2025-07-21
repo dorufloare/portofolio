@@ -53,7 +53,7 @@ const products = [
 
 const Projects = () => {
   return (
-    <section className="w-full px-4 sm:px-6 md:px-12 mt-24 md:mt-72 2xl:px-48 ">
+    <section className="w-full px-4 px-12 md:px-12 mt-24 md:mt-72 2xl:px-48 ">
       <h1 className="text-center text-2xl md:text-4xl font-bold mb-6 md:mb-24">
         Some of My Projects
       </h1>
