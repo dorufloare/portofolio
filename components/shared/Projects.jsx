@@ -57,7 +57,7 @@ const Projects = () => {
       <h1 className="text-center text-2xl md:text-4xl font-bold mb-6 md:mb-24">
         Some of My Projects
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6 xl:gap-6 justify-items-center">
+      <div className="grid grid-cols-1 px-[20%] sm:px-0 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-6 xl:gap-6 justify-items-center">
         {products.map((product, index) => (
           <Card
             key={index}
