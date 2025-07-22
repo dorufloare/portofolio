@@ -37,7 +37,7 @@ export function Card({ title, description, imageUrl, githubUrl }) {
             target="_blank"
             className="px-3 py-1.5 rounded-xl bg-black dark:bg-white dark:text-black text-white text-[10px] sm:text-xs font-bold"
           >
-            GitHub
+            Visit
           </CardItem>
         </div>
       </CardBody>
