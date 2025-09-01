@@ -15,7 +15,10 @@ const Career = () => {
       content: (
         <div className="md:ml-[20%]">
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
-            Currently working on an AI model specialized in anomaly detection for various video streaming analytics
+            Developed an AI model specialized in anomaly detection for various video streaming analytics
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
+            Built a Python backend service with a REST API and integrated a new frontend dashboard module to deliver real-time anomaly insights.
           </p>
         </div>
       ),
