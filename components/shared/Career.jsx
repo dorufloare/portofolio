@@ -8,6 +8,13 @@ const Career = () => {
 
   const data = [
     {
+      title: "DRW",
+      location: "London, UK",
+      position: "Incoming Software Engineer Intern",
+      date: "Jun–Sept 2026",
+      
+    },
+    {
       title: "Bitmovin",
       location: "Vienna, Austria",
       position: "Software Engineer Intern",

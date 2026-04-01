@@ -5,9 +5,9 @@ import Card from "@/components/ui/card";
 
 const products = [
   {
-    title: "Maide",
-    link: "https://maide.ro",
-    thumbnail: "/maide.png",
+    title: "Poker MCCFR Engine",
+    link: "https://github.com/dorufloare/mccfr-poker-engine",
+    thumbnail: "/poker-cards.jpg",
   },
   {
     title: "Trading Simulator",
@@ -23,6 +23,11 @@ const products = [
     title: "Poker bot",
     link: "https://github.com/dorufloare/poker",
     thumbnail: "/poker.png",
+  },
+  {
+    title: "Maide",
+    link: "https://maide.ro",
+    thumbnail: "/maide.png",
   },
   {
     title: "Verstappen AI",
