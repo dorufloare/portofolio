@@ -5,6 +5,11 @@ import Card from "@/components/ui/card";
 
 const products = [
   {
+    title: "DFML - C++ mlp library",
+    link: "https://github.com/dorufloare/dfml",
+    thumbnail: "/dfml.jpg"
+  },
+  {
     title: "Poker MCCFR Engine",
     link: "https://github.com/dorufloare/mccfr-poker-engine",
     thumbnail: "/poker-cards.jpg",
