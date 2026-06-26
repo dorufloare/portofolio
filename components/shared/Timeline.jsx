@@ -13,6 +13,9 @@ const Achievements = () => {
       content: (
         <div className="md:ml-[20%]">  
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
+            <span className="text-silver">Honorable Mention</span> – SEERC 2025
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             <span className="text-gold">4.0 GPA</span> in the first 3 semesters
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
@@ -23,9 +26,6 @@ const Achievements = () => {
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             4th place – RCPC (Romanian ICPC)
-          </p>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
-            <span className="text-silver">Honorable Mention</span> – SEERC 2025
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             Member of the Scientific Committee – Grigore Moisil National Contest

@@ -10,7 +10,7 @@ const Career = () => {
     {
       title: "DRW",
       location: "London, UK",
-      position: "Incoming Software Engineer Intern",
+      position: "Software Engineer Intern",
       date: "Jun–Sept 2026",
       
     },
